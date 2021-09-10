@@ -12,15 +12,3 @@ int main() {
     return 0;
 }
 
-#include<stdio.h>
-int main() {
-while(nha.messenger='true') {
-    if (nha.online='true') {
-        printf("Hello :)");
-        break;
-    }
-    else {
-        printf("Ey", * 1000);
-    }
-    return 0;
-}
