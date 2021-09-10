@@ -17,6 +17,7 @@
     printf("%d \n", thisMonth);
 
 - Thêm long vào trước 1 kiểu dữ liệu để gấp đôi kích thước. 
+- Thêm short vào trước 1 kiểu dữ liệu để chia 2 kích thước
 - Chỉ dùng cho int, double
 VD: long double x
 
@@ -37,3 +38,4 @@ VD: long double x
     + .<số ký số>f: ghi phần thập phân đến số
 
 - Có thể vừa khai báo vừa gán giá trị, VD như int g = 1
+- Toán tử 3 ngôi: <biến> = <điều kiện> ? < biểu thức 1> : <biểu thức 2>;
