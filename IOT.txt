@@ -39,3 +39,25 @@ VD: long double x
 
 - Có thể vừa khai báo vừa gán giá trị, VD như int g = 1
 - Toán tử 3 ngôi: <biến> = <điều kiện> ? < biểu thức 1> : <biểu thức 2>;
+- Dịch trái 1 là x2, dịch phải 1 là chia 2
+
+# /*---------------------------------------------------
+# |                         Mảng                       |
+# ---------------------------------------------------*/
+
+- Khai báo 1 mảng: <kieu du lieu> ten[<kich thuoc mang>];
+- Ví dụ: khai bảo mảng a gồm 100 phần tử kiểu integer: int a[100];
+- Để truy nhập phần tử của mảng, ta có thể có 2 cách:
+    + Cách 1: a[i], ví dụ a[9] là mình truy nhâp phần tử số 10 của mảng vì index bắt đầu từ 0 => vậy mảng trên, có các phần tử: 0-99
+    + Cách 2: Dùng pointer, '*(a + i) , ví dụ '*(a+9) thì cũng tương đương a[9]
+
+- Ví dụ bạn cần sắp xếp 10 số integer, nhập từ bàn phím
+    + Trước tiên bạn cần có 1 mảng arr[10]; để lưu trữ các số trên
+    + Sau đó mới sắp xếp các giá trị trong mảng đó
+
+- Nếu chương trình chỉ yêu cầu sắp xếp 5 số integer thì ta có thể làm:
+    + Ta có thể làm: int a1, a2, a3, a4, a5;
+
+- Tuy nhiên, nếu đề bài yêu cầu sắp xếp 100 phần tử thì không thể khai báo kiểu trên được, mà phải dùng int a[100]; 
+
+- Nên dùng kiểu khai báo <kieu du lieu> ten[<kich thuoc mang>];
