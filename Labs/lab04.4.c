@@ -7,28 +7,29 @@ int main()
     - Date of modified: 10/09/2021
     - Goal of this project: Input and output data using scanf and printf
     */
-    int a; 
-    int b;  
-    int c;  
+    int a; // Minutes
+    int b;  // Dates
+    int c;  // Years
     int d;
+
         printf("------------------------------------------------------------------------------- \n\n");
-        printf("Xin vui long nhap so ngay: \n\n");
-        scanf("%d", &c);
+        printf("Xin vui long nhap so phut: \n\n");
+        scanf("%d", &a);
         printf("------------------------------------------------------------------------------- \n \n");
 
-        a = c / 365;
-        b = (c - a * 365) / 7;
-        d = c - (a * 365) - (b * 7);
+        b = a / 60 / 24;
+        c = a / 365;
+        d =  a - (b * 1440) - (c * 365);
 
-        printf("So ngay ban da nhap: %d \n", c);
+        printf("So phut ban da nhap: %d \n", a);
         printf(" \n");
         printf("------------------------------------------------------------------------------- \n \n");
-        printf("So nam quy doi duoc tu so ngay la %d \n", a);
-        printf("So tuan quy doi duoc tu so ngay la %d \n", b);
-        printf("So ngay du la %d \n \n", d);
+        printf("So ngay quy doi duoc tu so phut la %d \n",b);
+        printf("So nam quy doi duoc tu so phut la %d \n", c);
+        printf("So phut bi du la %d phut \n\n", d);
         printf("------------------------------------------------------------------------------- \n");
 
-        printf("Vay %d ngay doi duoc thanh %d nam, %d tuan, %d ngay. \n\n ", c, a, b, d);
+        printf("Vay %d phut doi duoc thanh %d nam, %d ngay va %d phut. \n\n ", a, c, b,d);
 
     return 0;
 }
