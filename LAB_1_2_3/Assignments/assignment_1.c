@@ -1,0 +1,1 @@
+// ĐK 1 tam giác: tổng 2 cạnh bất kỳ > cạnh còn lại
