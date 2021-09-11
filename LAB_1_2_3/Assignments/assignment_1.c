@@ -15,13 +15,53 @@
 #include <stdio.h>
 #include <math.h>
 
+#define PI 3.14159265
+
+
+
+float tinhcanh(float ax, float ay, float bx, float by)
+{
+    float ab = sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
+    return ab;
+}
+
+void ingoc(float a, float b, float c)
+{
+    float cosA = (b * b + c * c - a * a) / (2 * c * b);
+    float cosB = (a * a + c * c - b * b) / (2 * c * a);
+    float cosC = (a * a + b * b - c * c) / (2 * a * b);
+
+    float A = acos(cosA) * 180 / PI;
+    float B = acos(cosB) * 180 / PI;
+    float C = acos(cosC) * 180 / PI;
+
+    printf("\n------------------------------------\n");
+    printf("So do goc A la %.2f \n", A);
+    printf("So do goc B la %.2f \n", B);
+    printf("So do goc C la %.2f \n", C);
+}
+
+void incanhgoc(float ax, float ay, float bx, float by, float cx, float cy)
+{
+    float ab = tinhcanh(ax, ay, bx, by);
+    float bc = tinhcanh(bx, by, cx, cy);
+    float ca = tinhcanh(ax, ay, cx, cy);
+
+    printf("\n------------------------------------\n");
+    printf("Chieu dai cua canh AB la %.2f \n", ab);
+    printf("Chieu dai cua canh BC la %.2f \n", bc);
+    printf("Chieu dai cua canh AC la %.2f \n", ca);
+
+    ingoc(bc, ca, ab);
+}
+
 int kiemtra_tamgiac(float ax, float ay, float bx, float by, float cx, float cy)
 {
     float ab, bc, ca;
 
-    ab = sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
-    bc = sqrt((bx - cx) * (bx - cx) + (by - cy) * (by - cy));
-    ca = sqrt((cx - ax) * (cx - ax) + (cy - ay) * (cy - ay));
+    ab = tinhcanh(ax, ay, bx, by);
+    bc = tinhcanh(bx, by, cx, cy);
+    ca = tinhcanh(ax, ay, cx, cy);
 
     if (ab + bc > ca && ab + ca > bc && bc + ca > ab)
     {
@@ -32,7 +72,7 @@ int kiemtra_tamgiac(float ax, float ay, float bx, float by, float cx, float cy)
 
 int main()
 {
-    float ax, ay, bx, by, cx, cy;
+    float ax, ay, bx, by, cx, cy, cosA, cosB, cosC;
 
     do
     {
@@ -52,6 +92,8 @@ int main()
         printf("Toa do diem A da nhap: A(%.2f, %.2f) \n", ax, ay);
         printf("Toa do diem B da nhap: B(%.2f, %.2f) \n", bx, by);
         printf("Toa do diem C da nhap: C(%.2f, %.2f) \n\n", cx, cy);
+
+        incanhgoc(ax, ay, bx, by, cx, cy);
 
         if (!(kiemtra_tamgiac(ax, ay, bx, by, cx, cy)))
         {
