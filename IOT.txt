@@ -64,4 +64,72 @@ VD: long double x
 
 - Liệt kê tất các hàm xử lý chuỗi, cách sử dụng, chức năng
 * VD: islower,...
+ 
+Hàm strcat() 
+- Dùng để nối 2 chuỗi với nhau
+- Format: strcat(str1, str2);
+Hàm strchr() 
+- Dùng để tìm kiếm ký tự trong chuỗi, trong đó chr có thể là 1 biến hay hằng
+- VD: 
+    char str1[] = "Ha Noi";
+    char chr = 'a';
+    if (strchr(str1, chr) !=NULL) {
+        printf("\n %c co xuat hien trong chuoi &s \n", chr, str1);
+    }
+    else {
+        printf("\n %c khong xuat hien trong chuoi &s \n", chr, str);
+    }
 
+*Ask mentors | Hàm strcmp()
+- Dùng để so sánh 2 chuỗi với nhau
+- So sánh theo bảng mã ASCII
+- Được dùng để sắp xếp các chuỗi theo chiều tăng/giảm dần
+- Hàm sẽ trả về 1 số là hiệu của 2 ký tự cuối cùng đem so sánh
+- Hàm strcmp(s1,s2) trả về giá trị như sau:
+    + Một số âm nếu s1<s2
+    + Số 0 nếu s1 = s2
+    + Một số dương nếu s1>s2
+
+Hàm strcpy() 
+- Dùng để gán chuỗi cho chuỗi
+- Format: strcpy(dest, src);
+Hàm strlen()
+- Dùng để lấy kích thước của chuỗi
+- VD: char str [] = "nguyennt"
+      for(int i = 0; i<strlen(str); i++) {
+          printf("%c * ", str[i]);
+      }
+      return 0;
+    => n * g * u * y * e * n * n * t 
+
+
+Hàm strncat()
+- Nối n ký tự của chuỗi sau vào chuỗi trước
+- Cú pháp: strncat(s1, s2, n)
+Hàm strncpy()
+- Gán n ký tự đầu tiên của chuỗi s2 cho n ký tự đầu tiên của chuỗi s1
+- Format: strncpy(s1, s2, n);
+    + VD:   char s1[] = "abcd", s2[]= "1234";
+            strncpy(s1, s2, 2);
+            puts(s1); // Kết quả của s1 là 12cd
+
+Hàm strstr() 
+- Dùng để tìm kiếm chuỗi trong chuỗi
+- Format: strstr(Chuỗi1, Chuỗi2) // Tìm chuỗi2 trong chuỗi 1
+- Nếu Chuỗi2 không cs trong Chuỗi1 thì hàm trả về giá trị NULL, ngược lại hàm sẽ trả về 1 chuỗi bắt đầu từ vị trí đầu tiên tìm thấy Chuỗi2 cho đến hết Chuỗi1
+- VD: 
+    char str1[] = "abcdefghi", s2[] = "cdf";
+    strstr(s1, s2);
+    => Hàm trả kết quả cdefghi
+Hàm strrev()
+- Dùng để đảo ngược trật tự của chuỗi
+- Trả về kết quả là chuỗi đã đảo ngược
+- VD: strrev(nguyennt.dev) sẽ trả về kết quả ved.tnneyugn :D
+
+*Ask mentors | Hàm islower()
+- Kiểm tra xem ký tự có phải là chữ thường hay không, nếu là chữ cái thường trả về 1, ngược lại trả về 0
+- VD:   int islower (int c);
+
+*Ask mentors | Hàm isupper ()
+- Kiểm tra xem ký tự có phải là chữ hoa hay không, nếu là chữ hoa trả về 1, ngược lại trả về 0
+- VD:   int islower (int c);
