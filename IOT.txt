@@ -61,3 +61,7 @@ VD: long double x
 - Tuy nhiên, nếu đề bài yêu cầu sắp xếp 100 phần tử thì không thể khai báo kiểu trên được, mà phải dùng int a[100]; 
 
 - Nên dùng kiểu khai báo <kieu du lieu> ten[<kich thuoc mang>];
+
+- Liệt kê tất các hàm xử lý chuỗi, cách sử dụng, chức năng
+* VD: islower,...
+
