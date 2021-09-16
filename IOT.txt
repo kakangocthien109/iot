@@ -121,6 +121,8 @@ Hàm strstr()
     char str1[] = "abcdefghi", s2[] = "cdf";
     strstr(s1, s2);
     => Hàm trả kết quả cdefghi
+
+    strstr(filestr, pattern); // Tra ve dia chi cua pattern trong filestr.
 Hàm strrev()
 - Dùng để đảo ngược trật tự của chuỗi
 - Trả về kết quả là chuỗi đã đảo ngược
