@@ -116,7 +116,7 @@ Hàm strncpy()
 Hàm strstr() 
 - Dùng để tìm kiếm chuỗi trong chuỗi
 - Format: strstr(Chuỗi1, Chuỗi2) // Tìm chuỗi2 trong chuỗi 1
-- Nếu Chuỗi2 không cs trong Chuỗi1 thì hàm trả về giá trị NULL, ngược lại hàm sẽ trả về 1 chuỗi bắt đầu từ vị trí đầu tiên tìm thấy Chuỗi2 cho đến hết Chuỗi1
+- Nếu Chuỗi2 không có trong Chuỗi1 thì hàm trả về giá trị NULL, ngược lại hàm sẽ trả về 1 chuỗi bắt đầu từ vị trí đầu tiên tìm thấy Chuỗi2 cho đến hết Chuỗi1
 - VD: 
     char str1[] = "abcdefghi", s2[] = "cdf";
     strstr(s1, s2);
@@ -133,3 +133,20 @@ Hàm strrev()
 *Ask mentors | Hàm isupper ()
 - Kiểm tra xem ký tự có phải là chữ hoa hay không, nếu là chữ hoa trả về 1, ngược lại trả về 0
 - VD:   int islower (int c);
+
+strtok()
+
+Viết thêm dấu ngoặc nháy thì tự thêm NULL
+
+&y là địa chỉ của y
+
+* + địa chỉ = giá trị địa chỉ đó
+
+fun(arr) => tên của mảng arr cũng là con trỏ
+
+Tăng địa chỉ => tăng qua phần tử tiếp theo
+
+%p: in giá trị của con trỏ
+
+hàm puts() => in ra màn hình
+hàm free() => xoá cấp phát bộ nhớ

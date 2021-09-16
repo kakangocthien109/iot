@@ -1,27 +1,18 @@
-#include <stdio.h>
+﻿#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
+	char ch;
+	int n;
 
-float arr[2][5] = {
-    {1, 2, 3, 4, 5},
-    {6, 7, 8, 9, 10},
-};
+	ch = 'a';
+	n = islower(ch);
 
-for (int i = 0; i < 2; i++) {
-    for (int f = 0; f < 5; f++) {
-        printf ("Xin vui long nhap phan tu [%d][%d]\n", i, f);
-        scanf("%g", &arr[i][f]);
-        // printf("%g ", arr[i][f]);
-    }
-    printf("\n");
-}
+	if (n != 0)
+		printf("Biến ch là chữ thường.\n");
+	else
+		printf("Biến ch là chữ in.\n");
 
-
-for (int i = 0; i < 2; i++) {
-    for (int f = 0; f < 5; f++) {
-        printf("%3g ", arr[i][f]);
-    }
-    printf("\n");
-}
-
+	return 0;
 }
