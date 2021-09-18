@@ -1,5 +1,0 @@
-C:\Users\Pixel\AppData\Local\JetBrains\CLion2021.2\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Pixel/Documents/GitHub/iot/Assignments
-CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
-CMake Error: CMAKE_C_COMPILER not set, after EnableLanguage
--- Configuring incomplete, errors occurred!
-See also "/cygdrive/c/Users/Pixel/Documents/GitHub/iot/Assignments/cmake-build-debug/CMakeFiles/CMakeOutput.log".
