@@ -45,8 +45,9 @@ int main()
             for (int i = 0; i < them; i++)
             {
                 printf(sep);
-                printf("Xin vui long nhap thong tin sinh vien thu %d\n", i + num +1);
-                printf("Xin vui long nhap cac thong tin sau:");
+                printf("Nhap thong tin sinh vien thu %d\n", i + num +1);
+                printf(sep);
+                printf("Vui long nhap cac thong tin sau:");
                 printf(sep);
                 printf("- Ho va ten: ");
                 char temp;
@@ -69,7 +70,7 @@ int main()
             printf(sep);
             char temp;
             scanf("%c",&temp); // temp statement to clear buffer
-            printf("Vui long nhap ten sinh vien muon tim kiem: ");
+            printf("Vui long nhap ten hoc sinh muon tim kiem: ");
             scanf("%[^\n]s", ten);
 
             for (int i = 0; i < num; i++)
@@ -100,11 +101,3 @@ int main()
     }
     
 }
-
-
-
-11,13,16/SGK
-17,19,22,23 sbt
-Số là thêm 18,19,20,21,22
-Sgk15,16
-hình 14,19,20 SGK

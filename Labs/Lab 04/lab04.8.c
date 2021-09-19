@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int a, b, c, d;
+    int a, b, c, d, e;
     printf("Xin vui long nhap so a\n");
     scanf("%d", &a);
     printf("\nXin vui long nhap so b\n");
@@ -11,7 +11,6 @@ int main()
     printf("\nXin vui long nhap so d\n");
     scanf("%d", &d);
 
-    printf("\n %d\n", a);
     printf("\n Cac so ban da nhap la:\n");
     printf("a = %d\n", a);
     printf("b = %d\n", b);
@@ -22,6 +21,7 @@ int main()
     b = b * b;
     c = c * c;
     d = d * d;
+    e = (a + b + c + d) / 4;
 
     printf("\nBinh phuong cua so a la", a);
     printf("\nBinh phuong cua so b la", b);

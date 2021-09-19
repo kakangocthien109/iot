@@ -66,7 +66,7 @@ void dem_bantin_gui_thiet_bi()
 
     strcat(pattern2, ten_thiet_bi);
     
-    char *token = strtok(tempFilestr, "\n"); // Tach tempFilestr theo \n
+    char *token = strtok(tempFilestr, "\n"); // Tach tempFilestr theo \n | Cat ra roi thay dau xuong dong = null
 
     int dem_gui = 0;
 
@@ -106,10 +106,10 @@ void so_cong_tac()
         if(xuathien != NULL){
             char *xuathientb = strstr(token, pattern2); // Tra ve dia chi cua pattern2 trong token
             if(xuathientb != NULL){
-                strncpy(NWK, (xuathientb + 31), 4);
+                strncpy(NWK, (xuathientb + 31), 4); // xuathientb+31 do type:switch la 31 ky tu va sau zwave moi co dia chi thiet bi
                 if (strcmp(NWK, pre_NWK) != 0)
                 {
-                    strncpy(pre_NWK, NWK, 4);
+                    strncpy(pre_NWK, NWK, 4); // pre_NWK bỏ duplicate
                     dem_thietbi++;
                     strncpy(ENDPOINT, (xuathientb + 38), 1);
                     printf("Thiet bi %d co dia chi la: NWK - %s, ENDPOINT - %s\n", dem_thietbi, NWK, ENDPOINT);
@@ -128,8 +128,8 @@ void so_ban_tin_loi()
 
     char *token = strtok(tempFilestr, "\n"); // Tach tempFilestr theo \n
 
-    char reqid_chan[5] = "";
-    char reqid_le[5] = "";
+    char reqid_chan[5] = ""; // Cac ban tin gui
+    char reqid_le[5] = ""; // Cac ban tin nhan
     int chan = 1;
     int loi = 0;
 
@@ -140,7 +140,7 @@ void so_ban_tin_loi()
             if (chan == 1)
             {
                 strncpy(reqid_chan, (xuathien + 10), 4);
-                chan = 0;
+                chan = 0; // Ke tiep kt ban tin le
             }
             else
             {
@@ -162,7 +162,7 @@ int lay_ngay(int year, int month, int day) { // lay ngay theo Julian Day
         year--;
         month += 12;
     }
-    return 365*year + year/4 - year/100 + year/400 + (153*month - 457)/5 + day - 306;
+    return 365*year + year/4 - year/100 + year/400 + (153*month - 457)/5 + day - 306; // Lay ngay de so sanh do 2 ban tin gui - nhan co the khac ngay
 }
 
 void dotre_lonnhat() // tim do tre lon nhat
@@ -198,7 +198,7 @@ void dotre_lonnhat() // tim do tre lon nhat
     {
             strncpy(thoi_gian, (token + 7), 22);
             strncpy(temp_nam, thoi_gian, 4);
-            nam = atoi(temp_nam); // lay nam
+            nam = atoi(temp_nam); // lay nam | atoi chuyen chuoi thanh so nguyen
             strncpy(temp_thang, (thoi_gian + 5), 2);
             thang = atoi(temp_thang);
             strncpy(temp_ngay, (thoi_gian + 8), 2);
@@ -228,7 +228,7 @@ void dotre_lonnhat() // tim do tre lon nhat
                     chan = 1;
                     if (strcmp(reqid_chan, reqid_le) == 0) // so sanh ID chan va ID le
                     {
-                        tre = nhan - gui + (double)((layngay_nhan - layngay_gui) * 60 * 60 * 24);
+                        tre = nhan - gui + (double)((layngay_nhan - layngay_gui) * 60 * 60 * 24); // Cai truoc so sanh giay, cai sau so sanh ngay
                         max = (tre > max) ? tre : max; // cap nhat lon nhat
                     }
                 }

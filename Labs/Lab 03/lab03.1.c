@@ -14,6 +14,5 @@ int main() {
    printf("Chu vi cua hinh chu nhat co chieu dai %g va chieu rong %g la %g \n", a, b ,chuvi);
    printf("Dien tich cua hinh chu nhat co chieu dai %g va chieu rong %g la %g \n", a, b , dientich);
 
-   
    return 0;
 }

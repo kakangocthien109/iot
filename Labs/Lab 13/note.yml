@@ -1,0 +1,19 @@
+- fopen: Dùng để mở 1 file dưới dạng nào đó, 3 dạng cơ bản là r, w, a
+    VD: FILE *fo = fopen("test.txt", "r")
+
+- fclose: Dùng để đóng file
+    VD: fclose(fo);
+
+- fputs: Viết từng dòng vào file
+    VD: fputs(data, fo);
+
+- fgets: Lấy từng dòng nội dung của file
+    VD: fgets(data, 100, fo);
+
+- fprintf: Ghi nội dung vào file
+    VD: fprintf(fo, "%d", a);
+- rename: Thay đổi tên file
+    VD: rename(oldname, newname);
+
+- remove: xoá file
+    VD: remove(oldname);

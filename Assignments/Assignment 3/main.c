@@ -3,7 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-typedef struct POINT
+typedef struct POINT // Typedef dat lai ten cua struct
 {
     int row;      // tọa độ x của nút
     int col;   // tọa độ y của nút
@@ -42,7 +42,6 @@ void initQueue(Queue *q)
 
 int isEmpty(Queue q)
 {
-
     return (q.rear < q.front);
 }
 
@@ -132,13 +131,15 @@ void findSurroundingPoint(int x, int y, int *count)
         surroundingPnt[tempCnt] = matrix[x][y - 1];
         tempCnt++;
     }
+
     // kiểm tra xem vị trí điểm bên trên có đến được ko?
+    
     if ((checkCoordinate(x - 1, y) == true) && (matrix[x - 1][y].value == 1))
     {
-        surroundingPnt[tempCnt] = matrix[x - 1][y];
+        surroundingPnt[tempCnt] = matrix[x - 1][y]; // copy toa do vao surroudingpnt
         tempCnt++;
     }
-    *count = tempCnt;
+    *count = tempCnt; // tempCnt dem so nut xung quanh hop le
 }
 
 // Tìm đường đi ngắn nhất
