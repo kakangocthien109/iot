@@ -99,7 +99,7 @@ point_t deQueue(Queue *q)
 bool checkCoordinate(int x, int y)
 {
     bool ret = false;
-    if ((0 <= x && x < MAX_ROW) && (0 <= y && x < MAX_COLUMN))
+    if ((0 <= x && x <= MAX_ROW) && (0 <= y && x < MAX_COLUMN))
     {
         ret = true;
     }

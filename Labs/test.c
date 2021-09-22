@@ -1,11 +1,18 @@
+// Có 1 mảng gồm 5 phần tử, giá trị là 10, 20, 5, 30, 11
+
 #include <stdio.h>
-#include <stdlib.h>
+
 int main()
 {
-    int b = 10;
-    int *a = &b;
+    FILE *fp = fopen("test.txt", "r");
 
-    malloc(*a, sizeof(int));
+    if (fp == NULL) {
+        printf("Khong mo duoc file");
+        return;
+    }
+
+    fclose(fp);
+    fp = NULL;
 
     return 0;
 }
